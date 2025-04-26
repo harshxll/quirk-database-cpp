@@ -10,13 +10,16 @@ Quirk Database is a lightweight C++ database system with custom socket implement
 ## Project Structure
 ```
 quirk-database/
-├── utility/            # Core components
-│   ├── server_util.h   # Server operations
-│   ├── client_util.h   # Client operations  
-│   ├── fun_util.h      # Shared utilities
-│   └── imports.h       # Common definitions
-├── server.cpp          # Server entry point
-└── client.cpp          # Client entry point
+├── server/
+│   └── server.cpp          # Server main
+├── client/
+│   └── client.cpp          # Client main
+└── utility/
+    ├── config.h            # System configuration
+    ├── server_util.h       # Server operations
+    ├── client_util.h       # Client operations
+    ├── fun_util.h          # Shared functions
+    └── imports.h           # Core dependencies
 ```
 
 ## Building
@@ -56,7 +59,7 @@ g++ -std=c++17 client.cpp -o client
 ## Development Roadmap
 1. User-defined schema system
 2. Server-side data persistence
-3. AES-256 encryption layer
+3. Morse encryption layer
 4. Automated build system
 
 ## Contribution Guidelines
@@ -65,3 +68,4 @@ g++ -std=c++17 client.cpp -o client
 3. Test functionality before submitting PRs
 
 *Note: License will be added upon project maturity.*
+
